@@ -1,96 +1,120 @@
 <!DOCTYPE html>
 <html lang='es'>
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>KFitness - Servicios</title>
-  <link rel='stylesheet' href='../Assets/css/estilos.css'>
-  <link rel='stylesheet' href='../Assets/css/responsive.css'>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>KFitness - Servicios</title>
+    <link rel='stylesheet' href='../Assets/css/estilos.css'>
+    <link rel='stylesheet' href='../Assets/css/responsive.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap' rel='stylesheet'>
 </head>
 <body>
-  <header class='site-header' aria-label='Encabezado del sitio'></header>
-  <main>
-    <section class='encabezado-interno encabezado-kfitness6' aria-labelledby='servicios-principal-titulo'>
-      <div class='contenedor encabezado-interno-contenido'>
-        <h1 id='servicios-principal-titulo'>Servicios de KFitness</h1>
-        <p>Explora nuestros servicios y encuentra la opción adecuada para tus objetivos.</p>
-      </div>
-    </section>
-    <section class='seccion servicios-principal' aria-label='Listado y filtros de servicios'>
-      <div class='contenedor'>
-        <div class='filtros-servicios' role='group' aria-label='Filtros de servicios'>
-          <button class='boton boton-pequeno filtro activo' data-filtro='todos'>Todos</button>
-          <button class='boton boton-pequeno filtro' data-filtro='entrenamiento'>Entrenamiento</button>
-          <button class='boton boton-pequeno filtro' data-filtro='asesoria'>Asesoría</button>
-          <button class='boton boton-pequeno filtro' data-filtro='clases'>Clases</button>
+    <header class='site-header' aria-label='Encabezado del sitio'></header>
+    <main>
+        <section class='encabezado-interno encabezado-kfitness6' aria-labelledby='servicios-principal-titulo'>
+            <div class='contenedor encabezado-interno-contenido'>
+                <h1 id='servicios-principal-titulo'>Servicios de KFitness</h1>
+                <p>Explora nuestros servicios y encuentra la opción adecuada para tus objetivos.</p>
+            </div>
+        </section>
+        <section class='seccion servicios-principal' aria-label='Listado y filtros de servicios'>
+            <div class='contenedor'>
+
+                <!-- Filtros por categoría, se generan dinámicamente desde JS -->
+                <div class='filtros-servicios' id='filtros-categorias' role='group' aria-label='Filtros de servicios'>
+                    <button class='boton boton-pequeno filtro activo' data-filtro='todos'>Todos</button>
+                </div>
+
+                <!-- Contenedor donde se renderizan las tarjetas de servicios -->
+                <div class='grid tarjetas-servicios' id='lista-servicios'></div>
+
+                <!-- Mensaje informativo cuando no hay servicios disponibles -->
+                <div id='mensaje-sin-servicios' style='display:none; text-align:center; padding: 2rem;'>
+                    <p>No hay servicios disponibles en este momento. Por favor vuelve más tarde.</p>
+                </div>
+
+                <!-- Mensaje de error en caso de fallo en la API -->
+                <div id='mensaje-error' style='display:none; text-align:center; padding: 2rem;'>
+                    <p>Ocurrió un error al cargar los servicios. Por favor intenta de nuevo.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal para ver el detalle de un servicio -->
+        <div id='modal-servicio' style='display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:1300; align-items:center; justify-content:center; padding:1rem; backdrop-filter:blur(6px);'>
+            <div style='background:#0D0D0F; border:1px solid rgba(237,28,46,0.25); border-radius:16px; max-width:540px; width:100%; position:relative; overflow:hidden; box-shadow:0 32px 80px rgba(0,0,0,0.7); animation: modalEntrar 300ms cubic-bezier(0.2,0.75,0.25,1) both;'>
+
+                <!-- Imagen con gradiente encima -->
+                <div style='position:relative; width:100%; height:220px; overflow:hidden;'>
+                    <img id='modal-imagen' src='' alt='' style='width:100%; height:100%; object-fit:cover; display:block;'>
+                    <!-- Gradiente sobre la imagen para que el texto sea legible -->
+                    <div style='position:absolute; inset:0; background:linear-gradient(to top, #0D0D0F 0%, rgba(13,13,15,0.6) 50%, transparent 100%);'></div>
+                    <!-- Categoría flotando sobre la imagen -->
+                    <span id='modal-categoria' style='position:absolute; bottom:0.75rem; left:1.25rem; background:var(--acento,#ED1C2E); color:#fff; font-family:"Oswald",Arial,sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; padding:0.3rem 0.75rem; border-radius:999px;'></span>
+                    <!-- Botón cerrar -->
+                    <button onclick='cerrarModal()' style='position:absolute; top:0.75rem; right:0.75rem; background:rgba(0,0,0,0.55); border:1px solid rgba(255,255,255,0.15); color:#fff; font-size:1rem; cursor:pointer; border-radius:50%; width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; transition:background 200ms;' onmouseover='this.style.background="rgba(237,28,46,0.7)"' onmouseout='this.style.background="rgba(0,0,0,0.55)"'>✕</button>
+                </div>
+
+                <!-- Cuerpo del modal -->
+                <div style='padding:1.5rem 1.75rem 1.75rem;'>
+
+                    <!-- Nombre del servicio -->
+                    <h2 id='modal-nombre' style='font-family:"Oswald",Arial,sans-serif; font-size:1.9rem; font-weight:700; color:#fff; margin:0 0 1rem; letter-spacing:0.02em; line-height:1.1;'></h2>
+
+                    <!-- Descripción -->
+                    <p id='modal-descripcion' style='color:#B8B8BE; font-size:0.97rem; line-height:1.7; margin:0 0 1.25rem;'></p>
+
+                    <!-- Detalles: horario y precio -->
+                    <div style='display:grid; gap:0.75rem; margin-bottom:1.5rem;'>
+
+                        <!-- Horario -->
+                        <div id='modal-horario-contenedor' style='display:none; align-items:center; gap:0.75rem; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:0.75rem 1rem;'>
+                            <span style='font-size:1.3rem;'>🕐</span>
+                            <div>
+                                <p style='margin:0; font-size:0.75rem; color:#B8B8BE; text-transform:uppercase; letter-spacing:0.08em; font-weight:600;'>Horario</p>
+                                <p id='modal-horario' style='margin:0; color:#fff; font-size:0.95rem; font-family:"Oswald",Arial,sans-serif;'></p>
+                            </div>
+                        </div>
+
+                        <!-- Precio -->
+                        <div id='modal-precio-contenedor' style='display:flex; align-items:center; gap:0.75rem; background:rgba(237,28,46,0.08); border:1px solid rgba(237,28,46,0.2); border-radius:10px; padding:0.75rem 1rem;'>
+                            <span style='font-size:1.3rem;'>💪</span>
+                            <div>
+                                <p style='margin:0; font-size:0.75rem; color:#B8B8BE; text-transform:uppercase; letter-spacing:0.08em; font-weight:600;'>Precio</p>
+                                <p id='modal-precio' style='margin:0; color:#ED1C2E; font-size:1.1rem; font-weight:700; font-family:"Oswald",Arial,sans-serif;'></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Botón reservar -->
+                    <a href='../Pages/reservas.html' class='boton boton-principal' style='width:100%; font-family:"Oswald",Arial,sans-serif; font-size:1rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; padding:0.9rem;'>
+                        🏋️ Reservar ahora
+                    </a>
+
+                </div>
+            </div>
         </div>
-        <div class='grid tarjetas-servicios' id='lista-servicios'>
-          <article class='tarjeta servicio' data-categoria='entrenamiento'>
-            <img class='servicio-imagen' src='../Assets/img/servicio-entrenamiento.png' alt='Entrenamiento personalizado con acompañamiento profesional'>
-            <h3>Entrenamiento personalizado</h3>
-            <p>Rutinas individuales y evaluación avanzada para progresar seguro.</p>
-            <p class='detalle'>Horario: Lunes a viernes, 08:00 - 10:00.</p>
-            <div class='acciones-tarjeta'>
-              <button class='boton boton-secundario'>Ver detalles</button>
-              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
-            </div>
-          </article>
-          <article class='tarjeta servicio' data-categoria='asesoria'>
-            <img class='servicio-imagen' src='../Assets/img/servicio-asesoria.png' alt='Asesoría física y revisión de progreso'>
-            <h3>Asesoría física</h3>
-            <p>Consejos de nutrición, postura y prevención de lesiones.</p>
-            <p class='detalle'>Horario: Miércoles, 16:00 - 18:00.</p>
-            <div class='acciones-tarjeta'>
-              <button class='boton boton-secundario'>Ver detalles</button>
-              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
-            </div>
-          </article>
-          <article class='tarjeta servicio' data-categoria='entrenamiento'>
-            <img class='servicio-imagen' src='../Assets/img/servicio-planes.png' alt='Planificación de una rutina de entrenamiento'>
-            <h3>Planes de entrenamiento</h3>
-            <p>Diseños semanales para mejorar fuerza, resistencia y forma física.</p>
-            <p class='detalle'>Horario: Martes y jueves, 18:00 - 19:30.</p>
-            <div class='acciones-tarjeta'>
-              <button class='boton boton-secundario'>Ver detalles</button>
-              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
-            </div>
-          </article>
-          <article class='tarjeta servicio' data-categoria='clases'>
-            <img class='servicio-imagen' src='../Assets/img/servicio-clases.png' alt='Clase grupal de entrenamiento funcional'>
-            <h3>Clases grupales</h3>
-            <p>Entrenamiento en grupo con ambiente motivador y dinámico.</p>
-            <p class='detalle'>Horario: Sábado, 10:00 - 11:30.</p>
-            <div class='acciones-tarjeta'>
-              <button class='boton boton-secundario'>Ver detalles</button>
-              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
-            </div>
-          </article>
-          <article class='tarjeta servicio' data-categoria='entrenamiento'>
-            <img class='servicio-imagen' src='../Assets/img/servicio-seguimiento.png' alt='Evaluación y seguimiento del progreso físico'>
-            <h3>Seguimiento de progreso</h3>
-            <p>Monitoreo constante para ajustar el plan y mantener motivación.</p>
-            <p class='detalle'>Horario: Viernes, 17:00 - 18:00.</p>
-            <div class='acciones-tarjeta'>
-              <button class='boton boton-secundario'>Ver detalles</button>
-              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
-            </div>
-          </article>
-          <article class='tarjeta servicio' data-categoria='asesoria'>
-            <img class='servicio-imagen' src='../Assets/img/servicio-bienestar.png' alt='Sesión de movilidad y recuperación para el bienestar integral'>
-            <h3>Bienestar integral</h3>
-            <p>Apoyo en hábitos, descanso y estilo de vida saludable.</p>
-            <p class='detalle'>Horario: Jueves, 09:00 - 10:00.</p>
-            <div class='acciones-tarjeta'>
-              <button class='boton boton-secundario'>Ver detalles</button>
-              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class='site-footer' aria-label='Pie de página'></footer>
-  <script src='../Assets/js/app.js?v=20261003-1' defer></script>
-  <!-- noop: ensure ../Pages/servicios.html included in patch batch -->
+
+        <!-- Animación de entrada del modal -->
+        <style>
+            @keyframes modalEntrar {
+                from {
+                    opacity: 0;
+                    transform: translateY(24px) scale(0.97);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+        </style>
+
+    </main>
+    <footer class='site-footer' aria-label='Pie de página'></footer>
+    <script src='../Assets/js/app.js?v=20261003-1' defer></script>
+    <script src='../Assets/js/servicios.js' defer></script>
 </body>
 </html>

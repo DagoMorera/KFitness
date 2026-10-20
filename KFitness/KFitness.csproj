@@ -90,6 +90,7 @@
     <Content Include="Assets\img\servicio-planes.png" />
     <Content Include="Assets\img\servicio-seguimiento.png" />
     <Content Include="Assets\img\trainer.svg" />
+    <Content Include="Assets\js\servicios.js" />
     <Content Include="Assets\js\admin.js" />
     <Content Include="Assets\js\app.js" />
     <Content Include="Assets\js\autenticacion.js" />
@@ -132,6 +133,8 @@
     <Content Include="App_Code\Repositories\RepositorioUsuario.cs" />
     <Content Include="App_Code\Security\AdminAuthorization.cs" />
     <Content Include="App_Code\Security\PasswordHasher.cs" />
+    <Content Include="App_Code\Models\Servicio.cs" />
+    <Content Include="App_Code\Repositories\RepositorioServicio.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -150,6 +153,7 @@
     <Content Include="Api\Admin\user-detail.ashx" />
     <Content Include="Api\Admin\user-role.ashx" />
     <Content Include="Api\Admin\users.ashx" />
+    <Content Include="Api\servicios.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

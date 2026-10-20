@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|c:\\users\\dagob\\onedrive\\desktop\\dise\u00F1o de desarrollo y sistemas\\kfitness\\kfitness\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|c:\\users\\dagob\\onedrive\\desktop\\dise\u00F1o de desarrollo y sistemas\\kfitness\\kfitness\\assets\\js\\servicios.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\assets\\js\\servicios.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\kfitness\\pages\\servicios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\pages\\servicios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\kfitness\\assets\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\assets\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\kfitness\\app_code\\repositories\\repositorioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\app_code\\repositories\\repositorioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\kfitness\\app_code\\models\\servicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\app_code\\models\\servicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\kfitness\\api\\servicios.ashx||{DAB1E6DB-4119-49A3-ACE3-0FE8F3E0669F}",
+      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\api\\servicios.ashx||{DAB1E6DB-4119-49A3-ACE3-0FE8F3E0669F}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\kfitness\\assets\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C0E68F4-065F-4F0C-9EF1-A3F6CD835D5E}|KFitness\\KFitness.csproj|solutionrelative:kfitness\\assets\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 225,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +58,87 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "estilos.css",
+              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Assets\\css\\estilos.css",
+              "RelativeDocumentMoniker": "KFitness\\Assets\\css\\estilos.css",
+              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Assets\\css\\estilos.css",
+              "RelativeToolTip": "KFitness\\Assets\\css\\estilos.css",
+              "ViewState": "AgIAAKgFAAAAAAAAAAAmwNwFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-20T05:02:31.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Servicio.cs",
+              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\App_Code\\Models\\Servicio.cs",
+              "RelativeDocumentMoniker": "KFitness\\App_Code\\Models\\Servicio.cs",
+              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\App_Code\\Models\\Servicio.cs",
+              "RelativeToolTip": "KFitness\\App_Code\\Models\\Servicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:43:28.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RepositorioServicio.cs",
+              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\App_Code\\Repositories\\RepositorioServicio.cs",
+              "RelativeDocumentMoniker": "KFitness\\App_Code\\Repositories\\RepositorioServicio.cs",
+              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\App_Code\\Repositories\\RepositorioServicio.cs",
+              "RelativeToolTip": "KFitness\\App_Code\\Repositories\\RepositorioServicio.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:42:32.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "servicios.ashx",
+              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Api\\servicios.ashx",
+              "RelativeDocumentMoniker": "KFitness\\Api\\servicios.ashx",
+              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Api\\servicios.ashx",
+              "RelativeToolTip": "KFitness\\Api\\servicios.ashx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000192|",
+              "WhenOpened": "2026-10-20T04:42:06.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Assets\\js\\app.js",
+              "RelativeDocumentMoniker": "KFitness\\Assets\\js\\app.js",
+              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Assets\\js\\app.js",
+              "RelativeToolTip": "KFitness\\Assets\\js\\app.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-20T04:41:42.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "servicios.html",
+              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Pages\\servicios.html",
+              "RelativeDocumentMoniker": "KFitness\\Pages\\servicios.html",
+              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Pages\\servicios.html",
+              "RelativeToolTip": "KFitness\\Pages\\servicios.html",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwHAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-10-20T04:41:26.014Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\.gitignore",
-              "RelativeDocumentMoniker": "KFitness\\.gitignore",
-              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\.gitignore",
-              "RelativeToolTip": "KFitness\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-20T03:28:42.773Z",
+              "Title": "servicios.js",
+              "DocumentMoniker": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Assets\\js\\servicios.js",
+              "RelativeDocumentMoniker": "KFitness\\Assets\\js\\servicios.js",
+              "ToolTip": "C:\\Users\\dagob\\OneDrive\\Desktop\\Dise\u00F1o de Desarrollo y Sistemas\\KFitness\\KFitness\\Assets\\js\\servicios.js",
+              "RelativeToolTip": "KFitness\\Assets\\js\\servicios.js",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAswLUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-20T04:17:11.815Z",
               "EditorCaption": ""
             }
           ]
