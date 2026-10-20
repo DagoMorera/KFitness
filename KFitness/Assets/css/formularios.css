@@ -1,0 +1,104 @@
+.formulario {
+  display: grid;
+  gap: 1rem;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+  outline: 2px solid rgba(237,28,46,0.45);
+}
+
+.formulario-tarjeta {
+  max-width: 540px;
+}
+
+.auth-logo {
+  display: block;
+  width: min(210px, 52%);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  margin: -1rem auto 0.35rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(237,28,46,0.3));
+}
+
+.formulario-tarjeta > .auth-logo + h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formulario .check-terminos {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.formulario .check-terminos input[type='checkbox'] {
+  flex: 0 0 1.15rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--acento);
+}
+
+.formulario .fila-check label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.formulario .fila-check input[type='checkbox'] {
+  flex: 0 0 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--acento);
+}
+
+.formulario .fila-check a {
+  color: #f2a0a8;
+}
+
+.formulario .fila-check a:hover,
+.formulario .fila-check a:focus-visible {
+  color: #ffffff;
+}
+
+.formulario .mensaje-formulario {
+  min-height: 1.4em;
+  margin: 0;
+}
+
+.formulario-tarjeta h1 {
+  margin-top: 0;
+}
+
+.formulario-tarjeta .texto-ayuda {
+  margin-top: 1rem;
+}
+
+@media (max-width: 720px) {
+  .auth-logo {
+    width: min(170px, 58%);
+    height: auto;
+    margin-top: -0.75rem;
+  }
+
+  .formulario-tarjeta {
+    padding: 1.5rem;
+  }
+}

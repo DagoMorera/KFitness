@@ -1,0 +1,150 @@
+@media (max-width: 1100px) {
+  .hero-container {
+    /* Aprovechar más ancho en desktop; seguir la misma proporción que .contenedor */
+    width: min(90%, 1500px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'content'
+      'visual'
+      'cards';
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    order: 2;
+    margin-top: 0;
+  }
+
+  .hero-image {
+    height: clamp(480px, 65vw, 620px);
+    aspect-ratio: 6 / 5;
+    min-height: 0;
+  }
+
+  .hero-image img {
+    object-position: 64% center;
+  }
+
+  .hero-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-image {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .servicios-principal .tarjetas-servicios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-logo {
+    width: 100px;
+    height: 56px;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links.visible {
+    display: flex;
+  }
+
+  .menu-hamburguesa {
+    display: inline-flex;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2.5rem 0;
+  }
+
+  .hero-container {
+    /* Ajuste para tablets: aprovechar el ancho central sin exceder 680px */
+    width: min(calc(100% - 2rem), 680px);
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card,
+  .benefit-card {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .encabezado-interno {
+    min-height: 360px;
+  }
+
+  .encabezado-interno::before {
+    background-position: 70% 18%;
+    filter: blur(0.25px);
+  }
+
+  .encabezado-kfitness2::before,
+  .encabezado-kfitness3::before,
+  .encabezado-kfitness4::before,
+  .encabezado-kfitness5::before,
+  .encabezado-kfitness6::before {
+    background-position: 68% 15%;
+  }
+
+  .servicios-principal .tarjetas-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(2.6rem, 8vw, 4.8rem);
+  }
+
+  .hero-image {
+    height: clamp(360px, 105vw, 500px);
+    aspect-ratio: 4 / 5;
+    min-height: 0;
+  }
+
+  .hero-image img {
+    object-position: 70% center;
+  }
+
+  .hero-image::before {
+    background: linear-gradient(180deg, rgba(7,7,8,0.18) 0%, transparent 35%, rgba(7,7,8,0.12) 100%);
+  }
+
+  .nav-links.visible {
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}

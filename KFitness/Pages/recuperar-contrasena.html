@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KFitness - Recuperar contraseña</title>
+  <link rel='stylesheet' href='../Assets/css/estilos.css'>
+  <link rel='stylesheet' href='../Assets/css/formularios.css'>
+  <link rel='stylesheet' href='../Assets/css/responsive.css'>
+</head>
+<body>
+  <header class='site-header' aria-label='Encabezado del sitio'></header>
+  <main>
+    <section class='seccion recuperar-principal' aria-labelledby='recuperar-titulo'>
+      <div class='contenedor formulario-centro'>
+        <div class='tarjeta formulario-tarjeta'>
+          <h1 id='recuperar-titulo'>Recuperar contraseña</h1>
+          <form id='form-recuperar' class='formulario' novalidate>
+            <label for='recuperar-email'>Correo electrónico</label>
+            <input type='email' id='recuperar-email' name='email' required>
+            <button type='submit' class='boton boton-principal'>Enviar enlace de recuperación</button>
+            <p class='mensaje-formulario' id='recuperar-mensaje' aria-live='polite'></p>
+          </form>
+          <p class='texto-ayuda'>Ingresa el correo asociado a tu cuenta para solicitar la recuperación de acceso.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class='site-footer' aria-label='Pie de página'></footer>
+  <script src='../Assets/js/app.js?v=20261003-1' defer></script>
+  <script src='../Assets/js/formularios.js?v=2' defer></script>
+</body>
+</html>

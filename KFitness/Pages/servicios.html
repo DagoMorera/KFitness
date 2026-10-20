@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KFitness - Servicios</title>
+  <link rel='stylesheet' href='../Assets/css/estilos.css'>
+  <link rel='stylesheet' href='../Assets/css/responsive.css'>
+</head>
+<body>
+  <header class='site-header' aria-label='Encabezado del sitio'></header>
+  <main>
+    <section class='encabezado-interno encabezado-kfitness6' aria-labelledby='servicios-principal-titulo'>
+      <div class='contenedor encabezado-interno-contenido'>
+        <h1 id='servicios-principal-titulo'>Servicios de KFitness</h1>
+        <p>Explora nuestros servicios y encuentra la opción adecuada para tus objetivos.</p>
+      </div>
+    </section>
+    <section class='seccion servicios-principal' aria-label='Listado y filtros de servicios'>
+      <div class='contenedor'>
+        <div class='filtros-servicios' role='group' aria-label='Filtros de servicios'>
+          <button class='boton boton-pequeno filtro activo' data-filtro='todos'>Todos</button>
+          <button class='boton boton-pequeno filtro' data-filtro='entrenamiento'>Entrenamiento</button>
+          <button class='boton boton-pequeno filtro' data-filtro='asesoria'>Asesoría</button>
+          <button class='boton boton-pequeno filtro' data-filtro='clases'>Clases</button>
+        </div>
+        <div class='grid tarjetas-servicios' id='lista-servicios'>
+          <article class='tarjeta servicio' data-categoria='entrenamiento'>
+            <img class='servicio-imagen' src='../Assets/img/servicio-entrenamiento.png' alt='Entrenamiento personalizado con acompañamiento profesional'>
+            <h3>Entrenamiento personalizado</h3>
+            <p>Rutinas individuales y evaluación avanzada para progresar seguro.</p>
+            <p class='detalle'>Horario: Lunes a viernes, 08:00 - 10:00.</p>
+            <div class='acciones-tarjeta'>
+              <button class='boton boton-secundario'>Ver detalles</button>
+              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
+            </div>
+          </article>
+          <article class='tarjeta servicio' data-categoria='asesoria'>
+            <img class='servicio-imagen' src='../Assets/img/servicio-asesoria.png' alt='Asesoría física y revisión de progreso'>
+            <h3>Asesoría física</h3>
+            <p>Consejos de nutrición, postura y prevención de lesiones.</p>
+            <p class='detalle'>Horario: Miércoles, 16:00 - 18:00.</p>
+            <div class='acciones-tarjeta'>
+              <button class='boton boton-secundario'>Ver detalles</button>
+              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
+            </div>
+          </article>
+          <article class='tarjeta servicio' data-categoria='entrenamiento'>
+            <img class='servicio-imagen' src='../Assets/img/servicio-planes.png' alt='Planificación de una rutina de entrenamiento'>
+            <h3>Planes de entrenamiento</h3>
+            <p>Diseños semanales para mejorar fuerza, resistencia y forma física.</p>
+            <p class='detalle'>Horario: Martes y jueves, 18:00 - 19:30.</p>
+            <div class='acciones-tarjeta'>
+              <button class='boton boton-secundario'>Ver detalles</button>
+              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
+            </div>
+          </article>
+          <article class='tarjeta servicio' data-categoria='clases'>
+            <img class='servicio-imagen' src='../Assets/img/servicio-clases.png' alt='Clase grupal de entrenamiento funcional'>
+            <h3>Clases grupales</h3>
+            <p>Entrenamiento en grupo con ambiente motivador y dinámico.</p>
+            <p class='detalle'>Horario: Sábado, 10:00 - 11:30.</p>
+            <div class='acciones-tarjeta'>
+              <button class='boton boton-secundario'>Ver detalles</button>
+              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
+            </div>
+          </article>
+          <article class='tarjeta servicio' data-categoria='entrenamiento'>
+            <img class='servicio-imagen' src='../Assets/img/servicio-seguimiento.png' alt='Evaluación y seguimiento del progreso físico'>
+            <h3>Seguimiento de progreso</h3>
+            <p>Monitoreo constante para ajustar el plan y mantener motivación.</p>
+            <p class='detalle'>Horario: Viernes, 17:00 - 18:00.</p>
+            <div class='acciones-tarjeta'>
+              <button class='boton boton-secundario'>Ver detalles</button>
+              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
+            </div>
+          </article>
+          <article class='tarjeta servicio' data-categoria='asesoria'>
+            <img class='servicio-imagen' src='../Assets/img/servicio-bienestar.png' alt='Sesión de movilidad y recuperación para el bienestar integral'>
+            <h3>Bienestar integral</h3>
+            <p>Apoyo en hábitos, descanso y estilo de vida saludable.</p>
+            <p class='detalle'>Horario: Jueves, 09:00 - 10:00.</p>
+            <div class='acciones-tarjeta'>
+              <button class='boton boton-secundario'>Ver detalles</button>
+              <a href='../Pages/reservas.html' class='boton boton-principal'>Reservar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class='site-footer' aria-label='Pie de página'></footer>
+  <script src='../Assets/js/app.js?v=20261003-1' defer></script>
+  <!-- noop: ensure ../Pages/servicios.html included in patch batch -->
+</body>
+</html>

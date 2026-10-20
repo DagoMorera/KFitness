@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KFitness - Registro</title>
+  <link rel='stylesheet' href='../Assets/css/estilos.css'>
+  <link rel='stylesheet' href='../Assets/css/formularios.css'>
+  <link rel='stylesheet' href='../Assets/css/responsive.css'>
+</head>
+<body>
+  <header class='site-header' aria-label='Encabezado del sitio'></header>
+  <main>
+    <section class='seccion registro-principal' aria-labelledby='registro-titulo'>
+      <div class='contenedor formulario-centro'>
+        <div class='tarjeta formulario-tarjeta'>
+          <img class='auth-logo' src='../Assets/img/Logo1.png' alt='KFitness'>
+          <h1 id='registro-titulo'>Crear cuenta</h1>
+          <form id='form-registro' class='formulario' novalidate>
+            <label for='registro-nombre'>Nombre</label>
+            <input type='text' id='registro-nombre' name='nombre' autocomplete='given-name' required>
+            <label for='registro-apellido1'>Primer apellido</label>
+            <input type='text' id='registro-apellido1' name='apellido1' autocomplete='family-name' required>
+            <label for='registro-apellido2'>Segundo apellido</label>
+            <input type='text' id='registro-apellido2' name='apellido2' required>
+            <label for='registro-email'>Correo electrónico</label>
+            <input type='email' id='registro-email' name='email' autocomplete='email' required>
+            <label for='registro-telefono'>Teléfono</label>
+            <input type='tel' id='registro-telefono' name='telefono' autocomplete='tel' required>
+            <label for='registro-nacimiento'>Fecha de nacimiento</label>
+            <input type='date' id='registro-nacimiento' name='nacimiento' autocomplete='bday' required>
+            <label for='registro-password'>Contraseña</label>
+            <input type='password' id='registro-password' name='password' minlength='8' autocomplete='new-password' aria-describedby='registro-password-ayuda' required>
+            <small id='registro-password-ayuda' class='texto-ayuda'>Mínimo 8 caracteres, con mayúscula, minúscula y número.</small>
+            <label for='registro-password2'>Confirmar contraseña</label>
+            <input type='password' id='registro-password2' name='password2' minlength='8' autocomplete='new-password' required>
+            <label class='check-terminos'>
+              <input type='checkbox' id='registro-terminos' name='terminos' required>
+              Acepto los términos y condiciones
+            </label>
+            <button type='submit' class='boton boton-principal'>Crear cuenta</button>
+            <p class='mensaje-formulario' id='registro-mensaje' aria-live='polite'></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class='site-footer' aria-label='Pie de página'></footer>
+  <script src='../Assets/js/app.js?v=20261003-1' defer></script>
+  <script src='../Assets/js/formularios.js?v=2' defer></script>
+</body>
+</html>

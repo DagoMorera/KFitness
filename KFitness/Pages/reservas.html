@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KFitness - Reservas</title>
+  <link rel='stylesheet' href='../Assets/css/estilos.css'>
+  <link rel='stylesheet' href='../Assets/css/formularios.css'>
+  <link rel='stylesheet' href='../Assets/css/responsive.css'>
+</head>
+<body>
+  <header class='site-header' aria-label='Encabezado del sitio'></header>
+  <main>
+    <section class='seccion reservas-principal' aria-labelledby='reservas-titulo'>
+      <div class='contenedor reservas-contenido'>
+        <div class='tarjeta formulario-tarjeta'>
+          <h1 id='reservas-titulo'>Solicitar reserva</h1>
+          <form id='form-reserva' class='formulario' novalidate>
+            <label for='reserva-servicio'>Servicio</label>
+            <select id='reserva-servicio' name='servicio' required>
+              <option value=''>Selecciona un servicio</option>
+              <option value='Entrenamiento personalizado'>Entrenamiento personalizado</option>
+              <option value='Asesoría física'>Asesoría física</option>
+              <option value='Clases grupales'>Clases grupales</option>
+              <option value='Seguimiento de progreso'>Seguimiento de progreso</option>
+            </select>
+            <label for='reserva-fecha'>Fecha</label>
+            <input type='date' id='reserva-fecha' name='fecha' required>
+            <label for='reserva-hora'>Hora</label>
+            <input type='time' id='reserva-hora' name='hora' required>
+            <label for='reserva-instructor'>Instructor</label>
+            <input type='text' id='reserva-instructor' name='instructor' placeholder='Nombre del instructor' required>
+            <label for='reserva-observaciones'>Observaciones</label>
+            <textarea id='reserva-observaciones' name='observaciones' rows='4'></textarea>
+            <button type='submit' class='boton boton-principal'>Confirmar reserva</button>
+            <p class='mensaje-formulario' id='reserva-mensaje' aria-live='polite'></p>
+          </form>
+        </div>
+        <div class='tarjeta lista-reservas'>
+          <h2>Reservas recientes</h2>
+          <table class='tabla-reservas'>
+            <thead>
+              <tr>
+                <th>Servicio</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id='reservas-lista'>
+              <!-- reservas generadas por JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class='site-footer' aria-label='Pie de página'></footer>
+  <script src='../Assets/js/app.js?v=20261003-1' defer></script>
+  <script src='../Assets/js/reservas.js' defer></script>
+</body>
+</html>

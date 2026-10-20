@@ -1,0 +1,28 @@
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+bin/
+obj/
+Debug/
+Release/
+*.log
+*.tmp
+*.cache
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+._*
+
+# Temporales
+*.bak
+*.swp
+Thumbs.db
+
+# Datos privados locales
+App_Data/ProfilePhotos/

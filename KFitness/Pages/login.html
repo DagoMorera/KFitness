@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KFitness - Iniciar sesión</title>
+  <link rel='stylesheet' href='../Assets/css/estilos.css'>
+  <link rel='stylesheet' href='../Assets/css/formularios.css'>
+  <link rel='stylesheet' href='../Assets/css/responsive.css'>
+</head>
+<body>
+  <header class='site-header' aria-label='Encabezado del sitio'></header>
+  <main>
+    <section class='seccion login-principal' aria-labelledby='login-titulo'>
+      <div class='contenedor formulario-centro'>
+        <div class='tarjeta formulario-tarjeta'>
+          <img class='auth-logo' src='../Assets/img/Logo1.png' alt='KFitness'>
+          <h1 id='login-titulo'>Iniciar sesión</h1>
+          <form id='form-login' class='formulario' novalidate>
+            <label for='login-email'>Correo electrónico</label>
+            <input type='email' id='login-email' name='email' required>
+            <label for='login-password'>Contraseña</label>
+            <input type='password' id='login-password' name='password' required>
+            <div class='fila-check'>
+              <label>
+                <input type='checkbox' id='login-recordarme' name='recordarme'> Recordarme
+              </label>
+              <a href='recuperar-contrasena.html'>Recuperar contraseña</a>
+            </div>
+            <button type='submit' class='boton boton-principal'>Iniciar sesión</button>
+            <p class='texto-ayuda'>¿No tienes cuenta? <a href='../Pages/registro.html'>Regístrate</a></p>
+            <p class='mensaje-formulario' id='login-mensaje' aria-live='polite'></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class='site-footer' aria-label='Pie de página'></footer>
+  <script src='../Assets/js/app.js?v=20261003-1' defer></script>
+  <script src='../Assets/js/autenticacion.js?v=20261001-1' defer></script>
+</body>
+</html>

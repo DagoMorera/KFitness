@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KFitness - Panel administrativo</title>
+  <link rel='stylesheet' href='../Assets/css/estilos.css'>
+  <link rel='stylesheet' href='../Assets/css/admin.css'>
+  <link rel='stylesheet' href='../Assets/css/responsive.css'>
+</head>
+<body>
+  <svg aria-hidden='true' class='icon-sprite' xmlns='http://www.w3.org/2000/svg'>
+    <symbol id='i-grid' viewBox='0 0 24 24'><path d='M3 3h8v8H3zM13 3h8v5h-8zM13 10h8v11h-8zM3 13h8v8H3z'/></symbol>
+    <symbol id='i-users' viewBox='0 0 24 24'><path d='M16 11c1.66 0 3-1.79 3-4s-1.34-4-3-4-3 1.79-3 4 1.34 4 3 4zM8 11c1.66 0 3-1.79 3-4S9.66 3 8 3 5 4.79 5 7s1.34 4 3 4zM8 13c-2.76 0-5 2.24-5 5v2h10v-2c0-2.76-2.24-5-5-5zM16 13c-.58 0-1.14.1-1.66.29 1.54 1.08 2.55 2.87 2.64 4.91V20h7v-2c0-2.76-2.24-5-5-5z'/></symbol>
+    <symbol id='i-calendar' viewBox='0 0 24 24'><path d='M7 2v3M17 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z'/></symbol>
+    <symbol id='i-dumbbell' viewBox='0 0 24 24'><path d='M3 10h2v4H3zM19 10h2v4h-2zM7 9h2v6H7zM15 9h2v6h-2zM9 11h6v2H9z'/></symbol>
+    <symbol id='i-tag' viewBox='0 0 24 24'><path d='M20.59 13.41 12 22l-9-9V4h9l8.59 8.59a1.996 1.996 0 0 1 0 2.82zM7 7h.01'/></symbol>
+    <symbol id='i-chat' viewBox='0 0 24 24'><path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/></symbol>
+    <symbol id='i-chart' viewBox='0 0 24 24'><path d='M4 19h16M7 16V9M12 16V5M17 16v-3'/></symbol>
+    <symbol id='i-gear' viewBox='0 0 24 24'><path d='M12 8.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 1 0 12 8.5zM19.4 15a7.97 7.97 0 0 0 .06-2l2.04-1.58-2-3.46-2.45.63a8.06 8.06 0 0 0-1.73-1L15 4h-6l-.32 2.59c-.62.23-1.2.57-1.73 1l-2.45-.63-2 3.46L4.54 13a7.97 7.97 0 0 0 .06 2L2.56 16.58l2 3.46 2.45-.63c.53.43 1.11.77 1.73 1L9 23h6l.32-2.59c.62-.23 1.2-.57 1.73-1l2.45.63 2-3.46z'/></symbol>
+    <symbol id='i-shield' viewBox='0 0 24 24'><path d='M12 2 4 5v6c0 5.25 3.4 10.74 8 12 4.6-1.26 8-6.75 8-12V5z'/></symbol>
+    <symbol id='i-person' viewBox='0 0 24 24'><path d='M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.42 0-8 2.24-8 5v3h16v-3c0-2.76-3.58-5-8-5z'/></symbol>
+    <symbol id='i-logout' viewBox='0 0 24 24'><path d='M10 17 15 12 10 7M15 12H3M13 3h6v18h-6'/></symbol>
+    <symbol id='i-info' viewBox='0 0 24 24'><path d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM11 11h2v6h-2zm0-4h2v2h-2z'/></symbol>
+  </svg>
+
+  <header class='site-header admin-header' aria-label='Encabezado del panel administrativo'></header>
+  <main class='admin-main'>
+    <aside class='admin-sidebar' aria-label='Barra lateral administrativa'>
+      <div class='admin-brand'>
+        <img src='../Assets/img/Logo1.png' alt='KFitness' class='admin-brand-logo'>
+        <p class='admin-logo'>KFITNESS</p>
+        <p class='admin-subtitulo'>ADMINISTRACIÓN</p>
+      </div>
+      <nav class='admin-nav'>
+        <p class='admin-nav-titulo'>NAVEGACIÓN</p>
+        <button class='boton boton-pequeno activo' data-admin-seccion='dashboard'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-grid'></use></svg><span>Dashboard</span></button>
+        <button class='boton boton-pequeno' data-admin-seccion='usuarios'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-users'></use></svg><span>Control de usuarios</span></button>
+        <button class='boton boton-pequeno' data-admin-seccion='reservas'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-calendar'></use></svg><span>Reservas</span></button>
+        <button class='boton boton-pequeno' data-admin-seccion='rutinas'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-dumbbell'></use></svg><span>Rutinas</span></button>
+        <button class='boton boton-pequeno' data-admin-seccion='promociones'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-tag'></use></svg><span>Promociones</span></button>
+        <button class='boton boton-pequeno' data-admin-seccion='consultas'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-chat'></use></svg><span>Consultas</span></button>
+        <button class='boton boton-pequeno' data-admin-seccion='reportes'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-chart'></use></svg><span>Reportes</span></button>
+
+        <p class='admin-nav-titulo'>GESTIÓN DEL SISTEMA</p>
+        <button class='boton boton-pequeno' data-admin-seccion='configuracion'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-gear'></use></svg><span>Configuración</span></button>
+        <button class='boton boton-pequeno' data-admin-seccion='seguridad'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-shield'></use></svg><span>Seguridad y auditoría</span></button>
+
+        <p class='admin-nav-titulo'>CUENTA</p>
+        <a class='boton boton-pequeno admin-link' href='/../Pages/perfil.html'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-person'></use></svg><span>Mi perfil</span></a>
+        <button class='boton boton-secundario' id='cerrar-sesion-admin'><svg class='admin-icon' viewBox='0 0 24 24'><use href='#i-logout'></use></svg><span>Cerrar sesión</span></button>
+      </nav>
+    </aside>
+
+    <section class='admin-dashboard'>
+      <div class='admin-contenido'>
+        <section class='admin-seccion' id='admin-dashboard'>
+          <header class='admin-hero'>
+            <div>
+              <h1>Panel de administración</h1>
+              <p class='texto-principal'>Bienvenida, <strong id='admin-nombre'>Admin</strong>.</p>
+              <p class='admin-hero-sub'>Gestiona la operación de KFitness desde un solo lugar.</p>
+            </div>
+            <span class='admin-status-badge'><span class='status-dot'></span>Sistema operativo</span>
+          </header>
+
+          <div class='grid indicadores'>
+            <article class='tarjeta indicador kpi-card'>
+              <div class='kpi-icono'><svg class='kpi-svg' viewBox='0 0 24 24'><use href='#i-users'></use></svg></div>
+              <h3>Clientes registrados</h3>
+              <p id='kpi-clientes'>--</p>
+              <small>Ver clientes <span>→</span></small>
+            </article>
+            <article class='tarjeta indicador kpi-card'>
+              <div class='kpi-icono'><svg class='kpi-svg' viewBox='0 0 24 24'><use href='#i-calendar'></use></svg></div>
+              <h3>Reservas pendientes</h3>
+              <p id='kpi-reservas'>Pendiente</p>
+              <small>Módulo en preparación</small>
+            </article>
+            <article class='tarjeta indicador kpi-card'>
+              <div class='kpi-icono'><svg class='kpi-svg' viewBox='0 0 24 24'><use href='#i-chat'></use></svg></div>
+              <h3>Consultas pendientes</h3>
+              <p id='kpi-consultas'>Pendiente</p>
+              <small>Bandeja próximamente</small>
+            </article>
+            <article class='tarjeta indicador kpi-card'>
+              <div class='kpi-icono'><svg class='kpi-svg' viewBox='0 0 24 24'><use href='#i-dumbbell'></use></svg></div>
+              <h3>Rutinas activas</h3>
+              <p id='kpi-rutinas'>Pendiente</p>
+              <small>Asignación en diseño</small>
+            </article>
+          </div>
+
+          <section class='admin-bloque'>
+            <h2>Accesos rápidos</h2>
+            <div class='accesos-grid'>
+              <article class='acceso-card'>
+                <div class='acceso-icono'><svg class='acceso-svg' viewBox='0 0 24 24'><use href='#i-users'></use></svg></div>
+                <h3>Control de usuarios</h3>
+                <p>Gestionar usuarios del sistema</p>
+                <span class='acceso-badge'>Próximamente</span>
+              </article>
+              <article class='acceso-card'>
+                <div class='acceso-icono'><svg class='acceso-svg' viewBox='0 0 24 24'><use href='#i-calendar'></use></svg></div>
+                <h3>Reservas</h3>
+                <p>Gestionar programación de reservas</p>
+                <span class='acceso-badge'>Próximamente</span>
+              </article>
+              <article class='acceso-card'>
+                <div class='acceso-icono'><svg class='acceso-svg' viewBox='0 0 24 24'><use href='#i-dumbbell'></use></svg></div>
+                <h3>Rutinas</h3>
+                <p>Gestionar planes de entrenamiento</p>
+                <span class='acceso-badge'>Próximamente</span>
+              </article>
+              <article class='acceso-card'>
+                <div class='acceso-icono'><svg class='acceso-svg' viewBox='0 0 24 24'><use href='#i-tag'></use></svg></div>
+                <h3>Promociones</h3>
+                <p>Administrar campañas y beneficios</p>
+                <span class='acceso-badge'>Próximamente</span>
+              </article>
+            </div>
+          </section>
+
+          <section class='admin-bloque admin-bloque-secundario'>
+            <div class='estado-header'>
+              <h2>Estado de implementación</h2>
+              <span class='estado-badge'>1/4 disponibles</span>
+            </div>
+            <ul class='estado-implementacion-resumen'>
+              <li><span class='estado-item-titulo'>Clientes registrados</span><span class='estado-tag disponible'>Disponible</span><span class='estado-desc'>Datos obtenidos desde BD</span></li>
+              <li><span class='estado-item-titulo'>Reservas pendientes</span><span class='estado-tag pendiente'>Pendiente</span><span class='estado-desc'>Sin estructura actualmente</span></li>
+              <li><span class='estado-item-titulo'>Consultas pendientes</span><span class='estado-tag pendiente'>Pendiente</span><span class='estado-desc'>Sin estructura actualmente</span></li>
+              <li><span class='estado-item-titulo'>Rutinas activas</span><span class='estado-tag pendiente'>Pendiente</span><span class='estado-desc'>Sin estructura actualmente</span></li>
+            </ul>
+
+            <article class='notas-tecnicas'>
+              <h3><svg class='nota-icon' viewBox='0 0 24 24'><use href='#i-info'></use></svg>Notas técnicas</h3>
+              <ul class='lista-datos estado-lista' id='kpi-pendientes'>
+                <li>Verificando disponibilidad de tablas...</li>
+              </ul>
+            </article>
+          </section>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-usuarios' hidden>
+          <header class='admin-modulo-header'>
+            <div>
+              <h2>Control de usuarios</h2>
+              <p>Gestiona los usuarios y permisos de acceso a KFitness.</p>
+            </div>
+          </header>
+
+          <form class='admin-buscador' id='admin-usuarios-form'>
+            <input id='admin-usuarios-query' type='search' placeholder='Buscar por nombre o correo...' autocomplete='off'>
+            <button type='submit' class='boton boton-principal'>Buscar</button>
+          </form>
+
+          <div class='admin-users-summary'>
+            <article class='admin-users-stat'>
+              <h3>Usuarios totales</h3>
+              <p id='usuarios-total'>0</p>
+            </article>
+            <article class='admin-users-stat'>
+              <h3>Clientes</h3>
+              <p id='usuarios-clientes'>0</p>
+            </article>
+            <article class='admin-users-stat'>
+              <h3>Administradores</h3>
+              <p id='usuarios-admins'>0</p>
+            </article>
+            <article class='admin-users-stat'>
+              <h3>Usuarios activos</h3>
+              <p id='usuarios-activos'>0</p>
+            </article>
+          </div>
+
+          <div class='tabla-responsiva admin-users-table-wrap'>
+            <table class='admin-users-table'>
+              <thead>
+                <tr>
+                  <th>Usuario</th>
+                  <th>Correo</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id='admin-usuarios-tbody'>
+                <tr><td colspan='5'>Cargando usuarios...</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class='admin-empty-state' id='admin-usuarios-estado' hidden></p>
+
+          <div class='admin-pagination'>
+            <button class='boton boton-pequeno' id='admin-usuarios-prev' type='button'>‹ Anterior</button>
+            <span id='admin-usuarios-pageinfo'>Página 1 de 1</span>
+            <button class='boton boton-pequeno' id='admin-usuarios-next' type='button'>Siguiente ›</button>
+          </div>
+
+          <div class='admin-modal' id='admin-usuario-modal' hidden>
+            <div class='admin-modal-panel'>
+              <div class='admin-modal-header'>
+                <h3>Detalle de usuario</h3>
+                <button type='button' class='admin-modal-close' id='admin-modal-cerrar' aria-label='Cerrar'>×</button>
+              </div>
+
+              <div class='admin-modal-body'>
+                <div class='admin-detalle-grid'>
+                  <div><span class='label'>Nombre completo</span><strong id='detalle-nombre'>-</strong></div>
+                  <div><span class='label'>Correo</span><strong id='detalle-correo'>-</strong></div>
+                  <div><span class='label'>Rol actual</span><strong id='detalle-rol'>-</strong></div>
+                  <div><span class='label'>Estado</span><strong id='detalle-estado'>-</strong></div>
+                  <div id='detalle-telefono-wrap' hidden><span class='label'>Teléfono</span><strong id='detalle-telefono'>-</strong></div>
+                </div>
+
+                <div class='admin-role-editor'>
+                  <label for='admin-rol-select'>Rol</label>
+                  <select id='admin-rol-select'></select>
+                  <p class='admin-self-protect' id='admin-self-protect' hidden>
+                    Tu cuenta administrativa. Por seguridad, no puedes retirar tus propios permisos de Administrador.
+                  </p>
+                </div>
+
+                <div class='admin-confirm-box' id='admin-confirm-box' hidden>
+                  <h4>Cambiar rol de usuario</h4>
+                  <p id='admin-confirm-texto'></p>
+                  <div class='admin-confirm-actions'>
+                    <button type='button' class='boton boton-secundario' id='admin-confirm-cancelar'>Cancelar</button>
+                    <button type='button' class='boton boton-principal' id='admin-confirm-aceptar'>Confirmar cambio</button>
+                  </div>
+                </div>
+
+                <p class='mensaje-formulario' id='admin-usuario-mensaje' aria-live='polite'></p>
+              </div>
+
+              <div class='admin-modal-footer'>
+                <button type='button' class='boton boton-secundario' id='admin-rol-cancelar'>Cancelar</button>
+                <button type='button' class='boton boton-principal' id='admin-rol-guardar'>Guardar cambios</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-reservas' hidden>
+          <h2>Reservas</h2>
+          <p>Módulo preparado para RES-002/003/004 (consultar, confirmar y cancelar).</p>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-rutinas' hidden>
+          <h2>Rutinas</h2>
+          <p>Módulo preparado para RUT-002/003/004 (crear, editar, desactivar y asignar).</p>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-promociones' hidden>
+          <h2>Promociones</h2>
+          <p>Módulo preparado para HU-PRM-001/003/004.</p>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-consultas' hidden>
+          <h2>Consultas</h2>
+          <p>Módulo preparado para bandeja administrativa de consultas.</p>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-reportes' hidden>
+          <h2>Reportes</h2>
+          <p>Módulo preparado para HU-REP-001/002/003 (filtros y exportación).</p>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-configuracion' hidden>
+          <h2>Configuración</h2>
+          <p>Módulo preparado para HU-CFG-001/002/003 y HU-ADM-003.</p>
+        </section>
+
+        <section class='admin-seccion admin-modulo' id='admin-seguridad' hidden>
+          <h2>Seguridad y auditoría</h2>
+          <p>Módulo preparado para HU-ADM-004 (bitácora y filtros por fecha).</p>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class='site-footer' aria-label='Pie de página'></footer>
+  <script src='../Assets/js/app.js?v=20261003-1' defer></script>
+  <script src='../Assets/js/autenticacion.js?v=20261002-1' defer></script>
+  <script src='../Assets/js/admin.js?v=20261002-1' defer></script>
+</body>
+</html>
